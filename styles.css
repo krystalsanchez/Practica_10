@@ -1,0 +1,91 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url('fondo.jpg'); 
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  background-position: center; 
+}
+
+.clock {
+  margin: 20px;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+  position: relative;
+  overflow: hidden; 
+}
+
+.hour-mark {
+  position: absolute;
+  width: 30px;
+  height: 100px;
+  background-color: #d286f0;
+  color: #fff;
+  font-size: 20px;
+  border-radius: 50% 50% 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-origin: bottom center;
+  left: calc(50% - 15px); 
+  top: 0; 
+  transform: translate(-50%, -50%) rotate(0deg); 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}
+
+.hour1 { transform: rotate(30deg); }
+.hour2 { transform: rotate(60deg); }
+.hour3 { transform: rotate(90deg); }
+.hour4 { transform: rotate(120deg); }
+.hour5 { transform: rotate(150deg); }
+.hour6 { transform: rotate(180deg); }
+.hour7 { transform: rotate(210deg); }
+.hour8 { transform: rotate(240deg); }
+.hour9 { transform: rotate(270deg); }
+.hour10 { transform: rotate(300deg); }
+.hour11 { transform: rotate(330deg); }
+.hour12 { transform: rotate(0deg); }
+
+.hour, .minute, .second {
+  position: absolute;
+  width: 2px;
+  height: 100px;
+  background-color: #333;
+  transform-origin: bottom center;
+  left: calc(50% - 1px);
+  top: 0;
+  transform: translate(-50%, -50%) rotate(0deg); 
+  z-index: 2; 
+}
+
+.hour { transform: rotate(90deg); }
+.minute { transform: rotate(180deg); }
+.second {
+  width: 1px;
+  height: 100px;
+  background-color: red;
+  transform-origin: bottom center;
+  left: calc(50% - 0.5px); 
+  top: 0; 
+  transform: translate(-50%, -50%) rotate(0deg); 
+}
+
+
+#digitalClock {
+  font-family: 'Roboto', sans-serif;
+  font-size: 48px; 
+  color: #333;
+  text-align: center; 
+  padding: 10px; 
+  background-color: #d286f0; 
+  border-radius: 5px; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}
